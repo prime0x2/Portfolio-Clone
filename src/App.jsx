@@ -1,5 +1,6 @@
 import React from 'react';
 import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import LeftSide from './components/SideElement/LeftSide';
@@ -14,6 +15,7 @@ const App = () => {
 			<main>
 				<Header />
 				<About />
+				<Contact />
 			</main>
 		</>
 	);

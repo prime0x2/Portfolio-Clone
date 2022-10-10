@@ -9,7 +9,15 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className='navbar'>
+			<nav
+				className={
+					scrollY >= 30
+						? scrollDirection === 'down'
+							? 'navbar active'
+							: 'navbar hide'
+						: 'navbar'
+				}
+			>
 				<div className='left'>
 					<img src='/logo.svg' alt='' />
 				</div>

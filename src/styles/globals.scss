@@ -36,7 +36,23 @@
 }
 
 @layer components {
+	#root {
+		position: relative;
+
+		& > .loading-container {
+			@apply absolute top-0 left-0 w-full h-screen z-[10000000] flex items-center justify-center;
+
+			svg {
+				@apply w-32 h-32;
+			}
+		}
+	}
+
 	main {
 		@apply mobile-lg:px-[25px] px-[150px];
+	}
+
+	section {
+		@apply mobile-lg:py-[60px];
 	}
 }

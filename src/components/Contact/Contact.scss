@@ -1,0 +1,100 @@
+@import '/src/styles/config.scss';
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.contact {
+		@apply relative max-w-[600px] mx-auto mb-[100px] py-[100px] flex flex-col items-center justify-center tablet-lg:mb-[50px] mobile-lg:py-[60px];
+
+		.container {
+			@apply flex flex-col items-center justify-center;
+
+			.contact_inner {
+				@apply flex flex-col items-center justify-center text-center;
+
+				.numbered_heading {
+					@apply block mb-5 text-[16px] leading-[18px];
+
+					color: $green;
+					font-family: 'SFMono';
+
+					&::before {
+						@apply content-["04."] mr-[10px] relative text-[14px];
+					}
+				}
+
+				.title {
+					@apply text-[60px] leading-[66px] font-semibold mb-[10px] tablet-lg:text-[40px] tablet-lg:leading-[44px];
+
+					color: $light-slate2;
+				}
+
+				p {
+					@apply text-[20px] leading-[26px] mobile-lg:text-[18px] mobile-lg:leading-[23px];
+				}
+
+				.email_link {
+					@apply inline-block py-5 px-7 mt-[50px] cursor-pointer text-[14px] leading-[14px] border rounded;
+
+					color: $green;
+					border-color: $green;
+					font-family: 'SFMono';
+					transition: $delay;
+
+					&:hover {
+						background: rgba($green, 0.1);
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		@apply h-[70px] text-[12px] leading-[12px] text-center;
+
+		color: $light-slate1;
+
+		* {
+			font-family: 'SFMono';
+		}
+
+		.social-links {
+			@apply hidden tablet-lg:flex justify-between items-center max-w-[250px] mx-auto;
+
+			a {
+				@apply p-[10px];
+
+				svg {
+					@apply w-5 h-5;
+				}
+
+				&:hover {
+					color: $green;
+				}
+			}
+		}
+
+		.copyright {
+			@apply p-[10px];
+
+			transition: $delay;
+
+			.github_states {
+				@apply mt-[10px] text-center;
+
+				& > span {
+					@apply inline-flex items-center mx-[7px];
+				}
+
+				svg {
+					@apply inline-block mr-[5px] w-[14px] h-[14px];
+				}
+			}
+
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+}

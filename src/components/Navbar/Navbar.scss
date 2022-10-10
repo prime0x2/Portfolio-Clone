@@ -7,6 +7,8 @@
 	.navbar {
 		@apply fixed top-0 w-full h-[100px] px-[50px] flex items-center justify-between mobile-lg:px-[30px];
 
+		transition: $delay;
+
 		.left {
 			img {
 				@apply w-10 h-10;
