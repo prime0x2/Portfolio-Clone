@@ -1,0 +1,85 @@
+@import '/src/styles/config.scss';
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	/* Left side Element design */
+
+	.left_side_element {
+		@apply fixed bottom-0 left-10 w-10 mobile-lg:hidden;
+
+		ul {
+			@apply flex flex-col items-center justify-center;
+
+			li {
+				@apply w-[40px] h-[46px] hover:-translate-y-[3px];
+
+				transition: $delay;
+
+				a {
+					@apply p-[10px];
+
+					svg {
+						@apply w-5 h-5 inline-block;
+
+						color: $light-slate1;
+						transition: $delay;
+					}
+				}
+
+				&:last-of-type {
+					margin-bottom: 10px;
+				}
+
+				&:hover {
+					a {
+						svg {
+							color: $green;
+						}
+					}
+				}
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				width: 1px;
+				height: 90px;
+				margin: 0px auto;
+				background: $light-slate1;
+			}
+		}
+	}
+
+	/* Right Side Element Design */
+
+	.right_side_element {
+		@apply fixed bottom-0 right-10 w-10 mobile-lg:hidden;
+
+		.inner {
+			@apply flex flex-col items-center;
+
+			a {
+				@apply my-5 mx-auto p-[10px] text-[12px] leading-[18px] tracking-[0.1em] hover:-translate-y-1;
+				writing-mode: vertical-rl;
+				font-family: 'SFMono';
+				color: $light-slate1;
+				transition: $delay;
+
+				&:hover {
+					color: $green;
+				}
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				width: 1px;
+				height: 90px;
+				margin: 0px auto;
+				background: $light-slate1;
+			}
+		}
+	}
+}
