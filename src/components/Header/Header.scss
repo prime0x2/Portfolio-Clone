@@ -1,0 +1,52 @@
+@import '/src/styles/config.scss';
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.hero_section {
+		@apply min-h-screen flex flex-col items-start justify-center max-w-[1000px] mx-auto;
+
+		h5 {
+			@apply text-[16px] mb-[30px] ml-[4px] leading-[18px] mobile-lg:mb-[20px];
+
+			color: $green;
+			font-family: 'SFMono';
+		}
+
+		h1 {
+			@apply text-[80px] font-extrabold leading-[88px] mobile-lg:text-[40px] mobile-lg:leading-[44px];
+
+			color: $light-slate2;
+
+			&:nth-child(3) {
+				@apply leading-[72px] mt-[10px] mobile-lg:leading-[36px];
+
+				color: $slate;
+			}
+		}
+
+		p {
+			@apply my-[20px] max-w-[540px] text-[20px] leading-[26px] mobile-lg:text-[18px] mobile-lg:leading-[23px];
+
+			span {
+				color: $green;
+			}
+		}
+
+		.button {
+			button {
+				@apply mt-[30px] border py-5 px-7 text-[14px] rounded-[4px] leading-[14px];
+
+				color: $green;
+				border-color: $green;
+				font-family: 'SFMono';
+				transition: $delay;
+
+				&:hover {
+					background: rgba($green, 0.1);
+				}
+			}
+		}
+	}
+}
