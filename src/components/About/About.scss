@@ -1,0 +1,101 @@
+@import '/src/styles/config.scss';
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.about {
+		@apply min-h-screen max-w-[900px] mx-auto flex items-center justify-center;
+
+		.about_container {
+			@apply w-full;
+
+			h2 {
+				@apply flex items-center relative mt-[10px] mb-[40px] whitespace-nowrap w-full font-semibold text-[32px] leading-[35px] mobile-lg:text-[26px] mobile-lg:leading-[29px];
+
+				color: $light-slate2;
+
+				&::before {
+					@apply content-["01."] relative bottom-[4px] mr-[10px] text-[20px] font-normal mobile-lg:mr-[5px] mobile-lg:-mb-[3px] mobile-lg:text-[16px];
+
+					color: $green;
+					font-family: 'SFMono';
+				}
+
+				&::after {
+					@apply content-[""] block relative -top-[5px] w-[300px] h-[1px] ml-[20px] tablet-lg:w-full tablet-sm:ml-[10px];
+
+					background-color: $light-navy2;
+				}
+			}
+
+			.inner {
+				@apply grid gap-[50px] tablet-lg:block;
+
+				grid-template-columns: 3fr 2fr;
+
+				.about_text {
+					p {
+						@apply text-[20px] font-normal leading-[26px] mb-[15px] mobile-lg:text-[18px] mobile-lg:leading-[23px];
+
+						a {
+							color: $green;
+						}
+					}
+
+					.skill-list {
+						@apply grid gap-[10px] mt-[20px];
+
+						grid-template-columns: repeat(2, minmax(140px, 200px));
+
+						li {
+							@apply relative mb-[5px] pl-[20px] text-[13px];
+
+							font-family: 'SFMono';
+
+							&::before {
+								@apply content-["▹"] absolute left-0 top-[2px] text-[14px] leading-[12px];
+
+								color: $green;
+							}
+						}
+					}
+				}
+
+				.about_pic {
+					@apply tablet-lg:w-[70%] tablet-lg:mx-auto tablet-lg:mt-[50px];
+
+					.wrapper {
+						@apply w-[300px] h-[300px] rounded relative mobile-lg:w-full mobile-lg:h-full;
+
+						background: $green;
+						transition: $delay;
+
+						img {
+							mix-blend-mode: multiply;
+						}
+
+						&:hover {
+							img {
+								mix-blend-mode: normal;
+							}
+						}
+
+						&::before {
+							@apply content-[""] absolute block w-full h-full border-2 top-5 left-5 rounded;
+
+							background: $navy;
+							border-color: $green;
+							transition: $delay;
+							z-index: -1;
+						}
+
+						&:hover::before {
+							@apply top-4 left-4;
+						}
+					}
+				}
+			}
+		}
+	}
+}
