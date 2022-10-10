@@ -3,10 +3,18 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
+import Projects from './components/Projects/Projects';
+import Loading from './components/Shared/Loading';
 import LeftSide from './components/SideElement/LeftSide';
 import RightSide from './components/SideElement/RightSide';
 
 const App = () => {
+	const [isLoading, setIsLoading] = React.useState(true);
+
+	if (isLoading) {
+		return <Loading loading={setIsLoading} />;
+	}
+
 	return (
 		<>
 			<Navbar />
@@ -16,6 +24,7 @@ const App = () => {
 				<Header />
 				<About />
 				<Contact />
+				<Projects />
 			</main>
 		</>
 	);

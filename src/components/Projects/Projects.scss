@@ -1,0 +1,151 @@
+@import '/src/styles/config.scss';
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.projects {
+		@apply min-h-screen max-w-[1000px] mx-auto py-[100px] flex flex-col items-center justify-center;
+
+		.container {
+			@apply w-full;
+
+			h2 {
+				@apply text-[32px] leading-[35px] font-semibold text-center mb-[10px] tablet-lg:text-[24px];
+
+				color: $light-slate2;
+			}
+
+			a {
+				position: relative;
+				z-index: 1;
+			}
+
+			& > a {
+				@apply text-[14px] leading-[18px] block text-center;
+
+				color: $green;
+				font-family: 'SFMono';
+			}
+
+			.projects_grid {
+				@apply my-[50px] grid gap-[15px] relative;
+
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+				@media screen and (max-width: 1080px) {
+					grid-template-columns: repeat(
+						auto-fill,
+						minmax(250px, 1fr)
+					);
+				}
+
+				.project_inner {
+					@apply flex flex-col justify-between items-start relative h-full py-8 px-7 rounded overflow-auto;
+
+					box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+					background: $light-navy1;
+					transition: $delay;
+
+					.project_top {
+						@apply flex justify-between items-center mb-[35px];
+
+						.folder {
+							color: $green;
+
+							svg {
+								@apply w-10 h-10;
+							}
+						}
+
+						.project_links {
+							@apply flex items-center -mr-[10px];
+
+							color: $light-slate1;
+
+							a {
+								@apply flex justify-center items-center py-[5px] px-[7px];
+
+								svg {
+									@apply w-[20px] h-[20px];
+
+									&:hover {
+										color: $green;
+									}
+								}
+
+								&:last-of-type {
+									svg {
+										@apply w-[22px] h-[22px] -mt-1;
+									}
+								}
+							}
+						}
+					}
+
+					.project_title {
+						@apply mb-[10px] font-semibold;
+
+						color: $light-slate2;
+
+						a {
+							@apply static text-[22px] leading-[24px];
+
+							&::before {
+								@apply content-[""] block absolute z-0 w-full h-full top-0 left-0;
+							}
+						}
+					}
+
+					.project_desc {
+						@apply text-[17px] leading-[22px];
+
+						color: $light-slate1;
+					}
+
+					.project_tech {
+						@apply flex items-end flex-grow flex-wrap mt-5;
+
+						li {
+							@apply text-[12px] leading-[21px];
+
+							font-family: 'SFMono';
+
+							&:not(:last-of-type) {
+								@apply mr-[15px];
+							}
+						}
+					}
+				}
+
+				li {
+					@media (prefers-reduced-motion: no-preference) {
+						&:hover,
+						&:focus-within {
+							.project_inner {
+								transform: translateY(-7px);
+							}
+						}
+					}
+				}
+			}
+
+			.more_button {
+				@apply mt-8 text-center;
+
+				button {
+					@apply cursor-pointer py-5 px-7 border text-[13px] leading-[13px] rounded;
+
+					font-family: 'SFMono';
+					color: $green;
+					border-color: $green;
+					transition: $delay;
+
+					&:hover {
+						background: rgba($green, 0.1);
+					}
+				}
+			}
+		}
+	}
+}
