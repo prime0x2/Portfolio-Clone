@@ -1,0 +1,138 @@
+@import '/src/styles/config.scss';
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.navbar {
+		@apply fixed top-0 w-full h-[100px] px-[50px] flex items-center justify-between mobile-lg:px-[30px];
+
+		.left {
+			img {
+				@apply w-10 h-10;
+			}
+		}
+
+		.right {
+			@apply flex items-center mobile-lg:hidden;
+
+			ul {
+				@apply flex justify-between items-center;
+
+				li {
+					a {
+						@apply px-[10px] mx-[5px] text-[13px] cursor-pointer;
+
+						color: $light-slate2;
+						font-family: 'SFMono';
+						transition: $delay;
+
+						span {
+							@apply font-medium tracking-wide mr-[5px] text-[12px];
+
+							color: $green;
+							font-family: 'SFMono';
+						}
+
+						&:hover {
+							color: $green;
+						}
+					}
+				}
+			}
+
+			.resume {
+				a {
+					@apply text-[13px] py-[0.7rem] px-4 ml-[15px] border rounded;
+
+					color: $green;
+					border-color: $green;
+					font-family: 'SFMono';
+					transition: $delay;
+
+					&:hover {
+						background: rgba($green, 0.1);
+					}
+				}
+			}
+		}
+
+		.mobile-nav {
+			@apply hidden mobile-lg:block;
+		}
+
+		&.active {
+			@apply h-[70px] mt-0 shadow-xl overflow-hidden;
+
+			background: rgba($navy, 0.85);
+			backdrop-filter: blur(10px);
+			z-index: 100000;
+			transition: $delay;
+		}
+
+		&.hide {
+			@apply -mt-28;
+		}
+	}
+
+	.mobile-navbar {
+		@apply fixed top-0 right-0 min-h-screen z-[1000000000000000000] w-full max-w-0 flex flex-col items-center justify-center overflow-hidden;
+
+		background: $light-navy1;
+		transition: $delay;
+
+		ul {
+			@apply flex flex-col items-center justify-center;
+
+			li {
+				a {
+					@apply block px-[10px] py-2 my-2 text-[14px] leading-[18px] cursor-pointer text-center;
+
+					color: $light-slate2;
+					font-family: 'SFMono';
+					transition: $delay;
+
+					span {
+						@apply block font-medium tracking-wide text-[14px];
+
+						color: $green;
+						font-family: 'SFMono';
+					}
+
+					&:hover {
+						color: $green;
+					}
+				}
+			}
+		}
+
+		.resume {
+			@apply w-[150px] text-center;
+
+			a {
+				@apply inline-block w-full text-[14px] py-[0.8rem] px-4 mt-10 border rounded;
+
+				color: $green;
+				border-color: $green;
+				font-family: 'SFMono';
+				transition: $delay;
+
+				&:hover {
+					background: rgba($green, 0.1);
+				}
+			}
+		}
+
+		.close-menu {
+			@apply w-[30px] h-[30px] absolute top-5 right-5;
+
+			svg {
+				@apply w-full h-full;
+			}
+		}
+
+		&.active {
+			@apply max-w-[240px];
+		}
+	}
+}
