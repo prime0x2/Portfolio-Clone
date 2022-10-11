@@ -15,7 +15,7 @@ const useScroll = () => {
         setScrollX(bodyOffset.left);
         setScrollDirection(lastScrollTop > -bodyOffset.top ? "down" : "up");
         setLastScrollTop(-bodyOffset.top);
-        console.log(scrollY, "-----", scrollX);
+        // console.log(scrollY, "-----", scrollX);
     };
 
     useEffect(() => {
