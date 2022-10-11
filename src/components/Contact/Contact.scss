@@ -1,4 +1,4 @@
-@import '/src/styles/config.scss';
+@import "/src/styles/config.scss";
 
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +17,7 @@
 					@apply block mb-5 text-[16px] leading-[18px];
 
 					color: $green;
-					font-family: 'SFMono';
+					font-family: "SFMono";
 
 					&::before {
 						@apply content-["04."] mr-[10px] relative text-[14px];
@@ -39,7 +39,7 @@
 
 					color: $green;
 					border-color: $green;
-					font-family: 'SFMono';
+					font-family: "SFMono";
 					transition: $delay;
 
 					&:hover {
@@ -56,7 +56,7 @@
 		color: $light-slate1;
 
 		* {
-			font-family: 'SFMono';
+			font-family: "SFMono";
 		}
 
 		.social-links {

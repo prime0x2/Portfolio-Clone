@@ -1,4 +1,4 @@
-@import '/src/styles/config.scss';
+@import "/src/styles/config.scss";
 
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +17,7 @@
 					@apply content-["02."] relative bottom-[4px] mr-[10px] text-[20px] font-normal mobile-lg:mr-[5px] mobile-lg:-mb-[3px] mobile-lg:text-[16px];
 
 					color: $green;
-					font-family: 'SFMono';
+					font-family: "SFMono";
 				}
 
 				&::after {
@@ -78,7 +78,7 @@
 							@apply my-[10px] text-[13px];
 
 							color: $green;
-							font-family: 'SFMono';
+							font-family: "SFMono";
 						}
 
 						.project_title {
@@ -125,7 +125,7 @@
 								@apply whitespace-nowrap text-[13px] mr-[20px] mb-[5px] tablet-lg:mr-[10px] tablet-lg:mb-[5px] tablet-lg:text-[#ccd6f6];
 
 								color: $light-slate1;
-								font-family: 'SFMono';
+								font-family: "SFMono";
 							}
 						}
 

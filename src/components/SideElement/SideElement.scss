@@ -1,4 +1,4 @@
-@import '/src/styles/config.scss';
+@import "/src/styles/config.scss";
 
 @tailwind components;
 @tailwind utilities;
@@ -42,7 +42,7 @@
 			}
 
 			&::after {
-				content: '';
+				content: "";
 				display: block;
 				width: 1px;
 				height: 90px;
@@ -63,7 +63,7 @@
 			a {
 				@apply my-5 mx-auto p-[10px] text-[12px] leading-[18px] tracking-[0.1em] hover:-translate-y-1;
 				writing-mode: vertical-rl;
-				font-family: 'SFMono';
+				font-family: "SFMono";
 				color: $light-slate1;
 				transition: $delay;
 
@@ -73,7 +73,7 @@
 			}
 
 			&::after {
-				content: '';
+				content: "";
 				display: block;
 				width: 1px;
 				height: 90px;

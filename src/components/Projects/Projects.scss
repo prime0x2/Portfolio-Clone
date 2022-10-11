@@ -1,4 +1,4 @@
-@import '/src/styles/config.scss';
+@import "/src/styles/config.scss";
 
 @tailwind components;
 @tailwind utilities;
@@ -25,7 +25,7 @@
 				@apply text-[14px] leading-[18px] block text-center;
 
 				color: $green;
-				font-family: 'SFMono';
+				font-family: "SFMono";
 			}
 
 			.projects_grid {
@@ -109,7 +109,7 @@
 						li {
 							@apply text-[12px] leading-[21px];
 
-							font-family: 'SFMono';
+							font-family: "SFMono";
 
 							&:not(:last-of-type) {
 								@apply mr-[15px];
@@ -136,7 +136,7 @@
 				button {
 					@apply cursor-pointer py-5 px-7 border text-[13px] leading-[13px] rounded;
 
-					font-family: 'SFMono';
+					font-family: "SFMono";
 					color: $green;
 					border-color: $green;
 					transition: $delay;

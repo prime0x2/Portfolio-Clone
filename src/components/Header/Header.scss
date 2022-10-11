@@ -1,4 +1,4 @@
-@import '/src/styles/config.scss';
+@import "/src/styles/config.scss";
 
 @tailwind components;
 @tailwind utilities;
@@ -11,7 +11,7 @@
 			@apply text-[16px] mb-[30px] ml-[4px] leading-[18px] mobile-lg:mb-[20px];
 
 			color: $green;
-			font-family: 'SFMono';
+			font-family: "SFMono";
 		}
 
 		h1 {
@@ -40,7 +40,7 @@
 
 				color: $green;
 				border-color: $green;
-				font-family: 'SFMono';
+				font-family: "SFMono";
 				transition: $delay;
 
 				&:hover {
