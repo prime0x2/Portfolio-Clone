@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Experience from './components/Experience/Experience';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects/Projects';
@@ -23,8 +24,9 @@ const App = () => {
 			<main>
 				<Header />
 				<About />
-				<Contact />
+				<Experience />
 				<Projects />
+				<Contact />
 			</main>
 		</>
 	);

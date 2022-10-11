@@ -1,0 +1,100 @@
+@import '/src/styles/config.scss';
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.experience {
+		@apply w-full min-h-screen max-w-[700px] mx-auto flex items-center justify-center;
+
+		.container {
+			@apply w-full;
+
+			h2 {
+				@apply flex items-center relative mt-[10px] mb-[40px] whitespace-nowrap w-full font-semibold text-[32px] leading-[35px] mobile-lg:text-[26px] mobile-lg:leading-[29px];
+
+				color: $light-slate2;
+
+				&::before {
+					@apply content-["02."] relative bottom-[4px] mr-[10px] text-[20px] font-normal mobile-lg:mr-[5px] mobile-lg:-mb-[3px] mobile-lg:text-[16px];
+
+					color: $green;
+					font-family: 'SFMono';
+				}
+
+				&::after {
+					@apply content-[""] block relative -top-[5px] w-[300px] h-[1px] ml-[20px] tablet-lg:w-full tablet-sm:ml-[10px];
+
+					background-color: $light-navy2;
+				}
+			}
+
+			.inner {
+				@apply mobile-md:min-h-[340px] flex tablet-sm:block;
+
+				.tablist {
+					@apply relative flex flex-col items-start mobile-lg:w-[calc(100%+50px)] mobile-lg:pl-[25px] mobile-lg:-ml-[25px] tablet-sm:flex-row tablet-sm:overflow-x-auto tablet-sm:mb-[30px];
+
+					button {
+						@apply relative w-full h-[42px] px-5 py-[2px] flex items-center justify-start border-l-2 text-[13px] tablet-sm:justify-center tablet-sm:min-w-[120px] tablet-sm:py-0 tablet-sm:px-[15px] tablet-sm:border-l-0 tablet-sm:border-b-2 tablet-sm:text-center;
+
+						font-family: 'SFMono';
+						border-color: $light-navy2;
+						transition: $delay;
+
+						&:hover {
+							background: rgba($green, 0.1);
+						}
+
+						&.active {
+							color: $green;
+						}
+
+						&.active::before {
+							@apply content-[""] absolute top-0 -left-[1px] w-[2px] h-[42px] rounded tablet-sm:bottom-0 tablet-sm:top-auto tablet-sm:left-0 tablet-sm:w-full tablet-sm:h-[2px];
+
+							background: $green;
+							transition: $delay;
+						}
+					}
+				}
+
+				.tabcontent {
+					@apply ml-6 flex-grow mt-2 mobile-lg:m-0 mobile-lg:py-[10px] mobile-lg:px-[5px] mobile-lg:w-full mobile-lg:h-auto;
+
+					h3 {
+						@apply text-[22px] leading-[29px] mb-[2px] font-medium;
+
+						span {
+							&:first-of-type {
+								color: $light-slate2;
+							}
+
+							&:last-of-type {
+								color: $green;
+							}
+						}
+					}
+
+					p {
+						@apply text-[13px] leading-[17px] mb-6;
+
+						font-family: 'SFMono';
+					}
+
+					ul {
+						li {
+							@apply text-[18px] leading-[23px] relative pl-[30px] mb-[10px];
+
+							&::before {
+								@apply content-["▹"] absolute left-0 top-[2px];
+
+								color: $green;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
